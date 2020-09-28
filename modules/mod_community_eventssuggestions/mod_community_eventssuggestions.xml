@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+	<name>JS Events Suggestions</name>
+	<author>iJoomla</author>
+	<creationDate>April 2015</creationDate>
+	<copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://jomsocial.com</authorUrl>
+	<version>4.7.6</version>
+	<description>Events Suggestions module for JomSocial</description>
+	<files>
+		<filename module="mod_community_eventssuggestions">mod_community_eventssuggestions.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_community_eventssuggestions.xml</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_eventssuggestions.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+            <fieldset name="basic">
+                <field name="suggest_method" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_EVENTSSUGGESTIONS_MATCH_SETTINGS" description="MOD_COMMUNITY_EVENTSSUGGESTIONS_MATCH_DESC">
+                    <option value="0">MOD_COMMUNITY_EVENTSSUGGESTIONS_RANDOM_OPTION</option>
+                    <option value="1">MOD_COMMUNITY_EVENTSSUGGESTIONS_FRIENDS_OPTION</option>
+                </field>
+                <field name="include_group_events" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_EVENTSSUGGESTIONS_INCLUDE_GROUP_SETTINGS" description="MOD_COMMUNITY_EVENTSSUGGESTIONS_INCLUDE_GROUP_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="limit" type="text" class="btn-group btn-group-yesno" default="12" label="MOD_COMMUNITY_EVENTSSUGGESTIONS_LIMIT_SETTINGS" description="MOD_COMMUNITY_EVENTSSUGGESTIONS_LIMIT_SETTINGS"/>
+            </fieldset>
+		</fields>
+	</config>
+    <updateservers>
+        <server type="extension" priority="1" name="JS Event Sugesstions">https://www.jomsocial.com/updates/jseventsugesstions_update.xml</server>
+    </updateservers>
+</extension>

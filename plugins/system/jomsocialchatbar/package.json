@@ -1,0 +1,31 @@
+{
+  "name": "jomsocialchatbar",
+  "scripts": {
+    "build": "browserify assets/js/app.js | uglifyjs -c -m -o assets/js/app.min.js | node-sass assets/css/style.scss -o assets/css --output-style compressed --source-map true",
+    "js": "watchify assets/js/app.js -o assets/js/app.min.js -v",
+    "css": "node-sass assets/css/style.scss -o assets/css --output-style expanded --source-map true -w"
+  },
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "browserify-shim": "^3.8.14",
+    "envify": "^4.1.0",
+    "node-sass": "^4.9.0",
+    "uglify-js": "^3.3.28",
+    "watchify": "^3.11.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery",
+    "joms": "global:joms"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "dependencies": {}
+}

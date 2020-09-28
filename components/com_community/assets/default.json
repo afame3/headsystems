@@ -1,0 +1,14 @@
+{
+    "core": {
+        "css": [
+            "vendors/magnific-popup/magnific-popup",
+            "release/css/override"
+        ],
+        "js": [
+            "vendors/toolkit.min",
+            "source/js/utils/observer",
+            "release/js/loader"
+            
+        ]
+    }
+}

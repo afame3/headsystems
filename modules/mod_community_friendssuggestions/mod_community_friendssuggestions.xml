@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+	<name>JS Friends Suggestions</name>
+	<author>iJoomla</author>
+	<creationDate>April 2015</creationDate>
+	<copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://jomsocial.com</authorUrl>
+	<version>4.7.6</version>
+	<description>Friends Suggestions module for JomSocial</description>
+	<files>
+		<filename module="mod_community_friendssuggestions">mod_community_friendssuggestions.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_community_friendssuggestions.xml</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>models/fields/jsfieldcode.php</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_friendssuggestions.ini</language>
+    </languages>
+	<config>
+        <fields name="params" addfieldpath="/modules/mod_community_friendssuggestions/models/fields">
+            <fieldset name="basic">
+                <field name="profile_filter" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_MATCH_SETTINGS" description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_MATCH_DESC">
+                    <option value="0">MOD_COMMUNITY_FRIENDSSUGGESTIONS_ANYFIELD_OPTION</option>
+                    <option value="1">MOD_COMMUNITY_FRIENDSSUGGESTIONS_ALLFIELD_OPTION</option>
+                </field>
+                <field name="matchfield_1" type="jsfieldcode" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHONE_SETTINGS"
+                       description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHONE_DESC"
+                       required="false" />
+                <field name="matchfield_2" type="jsfieldcode" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHTWO_SETTINGS"
+                       description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHTWO_DESC"
+                       required="false" />
+                <field name="matchfield_3" type="jsfieldcode" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHTHREE_SETTINGS"
+                       description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHTHREE_DESC"
+                       required="false" />
+                <field name="matchfield_4" type="jsfieldcode" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHFOUR_SETTINGS"
+                       description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHFOUR_DESC"
+                       required="false" />
+                <field name="matchfield_5" type="jsfieldcode" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHFIVE_SETTINGS"
+                       description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FIELDMATCHFIVE_DESC"
+                       required="false" />
+                <field name="profile_type_suggest" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_PROFILETYPE_MATCH_SETTINGS" description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_PROFILETYPE_MATCH_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="fof_suggest" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FOF_MATCH_SETTINGS" description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_FOF_MATCH_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="matchmaking_mode" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_MATCHMAKING_SETTINGS" description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_MATCHMAKING_TIPS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="limit" type="text" class="btn-group btn-group-yesno" default="12" label="MOD_COMMUNITY_FRIENDSSUGGESTIONS_LIMIT_SETTINGS" description="MOD_COMMUNITY_FRIENDSSUGGESTIONS_LIMIT_SETTINGS"/>
+            </fieldset>
+		</fields>
+	</config>
+  <updateservers>
+    <server type="extension" priority="1" name="JS Friends Sugesstions">https://www.jomsocial.com/updates/jsfriendssugesstions_update.xml</server>
+  </updateservers>
+</extension>

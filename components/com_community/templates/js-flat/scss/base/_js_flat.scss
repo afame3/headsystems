@@ -1,0 +1,113 @@
+.joms-stream {
+  border-radius: 2px;
+  border: 1px solid $scss-color-border;
+  box-shadow: 0 -1px 0 rgba(0,0,0,0.1) inset;
+  margin-bottom: 20px !important;
+}
+
+.joms-stream .joms-stream__header,
+.joms-poll__header {
+  border-bottom: 1px solid $scss-color-border;
+  text-align: left;
+}
+
+.joms-stream__header {
+  position: relative;
+
+  &:before {
+    background-color: $scss-color-primary;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    left: 14px;
+    bottom: 0;
+    width: 37px;
+  }
+
+  &.no-gap {
+    border: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.joms-stream__status {
+  border-top: 1px solid $scss-color-border;
+}
+
+.joms-stream__actions {
+  width: 60%;
+}
+
+.joms-comment__user {
+  font-weight: 500;
+}
+
+.joms-comment__reply {
+  &.joms-js--comment-editor {
+    button {
+      font-size: $font-size-small;
+
+      .joms-no-touch & {
+        font-size: $scss-font-size;
+      }
+    }
+  }
+}
+
+ul.joms-emoticon__board {
+  width: 178px;
+
+  &.joms-board--above {
+    bottom: auto;
+  }
+}
+
+.joms-board--above {
+  display: block !important;
+  right: -27px;
+  bottom: 28px;
+  position: absolute;
+}
+
+.joms-animate--above {
+  opacity: 1 !important;
+  bottom: 32px;
+}
+
+.joms-action-wrap {
+  border: 1px solid #c00;
+  margin-bottom: ms();
+  text-align: right;
+
+  button {
+    float: right;
+  }
+}
+
+.joms-comment--bulletin {
+  margin-top: ms();
+
+  div.joms-comment__header {
+    background-color: #f0f0f0;
+    border: 0;
+    padding: 10px;
+  }
+}
+
+.joms-stream__body,
+.joms-comment__body {
+  padding-top: ms();
+}
+
+.joms-reacted__content {
+  .joms-stream__header {
+    &:before {
+      left: 45px;
+      width: calc(100% - 45px);
+    }
+  }
+}

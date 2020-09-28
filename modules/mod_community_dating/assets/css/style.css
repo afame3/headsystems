@@ -1,0 +1,61 @@
+.joms-module--dating,
+.joms-module--dating * {
+    box-sizing: border-box;
+}
+.joms-module--dating form, .joms-module--dating label {
+    margin: 0;
+}
+.joms-module--dating .joms-module-input,
+.joms-module--dating .joms-module-select {
+    background: #fff;
+    border: 1px solid #e3e5e7;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    display: inline-block;
+    height: 2.5em;
+    margin: 4px 0;
+    width: 100%;
+}
+.joms-module--dating .joms-module-select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.joms-module--dating .joms-module-select-wrapper {
+    position: relative;
+}
+.joms-module--dating .joms-module-select-wrapper::after {
+    background-image: url(../images/select-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    height: 8px;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 9px;
+}
+.joms-module--dating .joms-module-select-wrapper.joms-module--dating-gender::after {
+    top: 65%;
+}
+.joms-module--dating .joms-age-inputs > * {
+    float: left;
+    width: 40%;
+}
+.joms-module--dating .joms-age-inputs > span {
+    width: 20%;
+    height: 2.5em;
+    margin: 4px 0;
+    line-height: 2.5em;
+    text-align: center;
+}
+.joms-module--dating .joms-button--primary {
+    font-weight: bold;
+    margin-top: 10px;
+}

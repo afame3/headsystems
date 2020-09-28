@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+	<name>System - JomSocial Plugin</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright 2008 - 2010 by Slashes &amp; Dots Sdn Bhd. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>4.7.2</version>
+	<description><![CDATA[
+	A system plugin which is responsible to handle system calls in JomSocial.
+	]]></description>
+	<files>
+		<filename plugin="jomsocial">jomsocial.php</filename>
+	</files>
+	<params>
+	</params>
+</install>

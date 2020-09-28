@@ -1,0 +1,272 @@
+.joms-landing {
+  margin-bottom: ms(2);
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.joms-landing__cover {
+  .joms-landing.no-image & {
+    &:before {
+      padding-top: 0;
+    }
+  }
+}
+
+.joms-landing__image {
+  position: relative;
+  min-height: 540px;
+  background-size: cover !important;
+}
+
+.joms-landing__content {
+  margin-bottom: ms();
+
+  .joms-landing.no-image & {
+    position: relative;
+  }
+
+  @include media('large') {
+    display: table;
+    font-size: 100%;
+    width: 100%;
+  }
+}
+
+.joms-landing__text,
+.joms-landing__signup {
+  @include media('large') {
+    display:table-cell;
+    vertical-align: middle;
+  }
+}
+
+.joms-landing__text {
+  @extend %hidden-small;
+
+  @include media('large') {
+    width: $primary-width;
+  }
+
+  h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+}
+
+.joms-landing__signup {
+  float: right;
+  margin-right: ms(-1);
+
+  @media screen and (max-width: 480px) {
+    float: none;
+    margin: 0;
+  }
+}
+
+.login-facebook {
+  position: relative;
+  margin-bottom: ms();
+
+  span {
+    background-color: #3b5998;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .fb-login-button {
+    display: inline-block;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.joms-landing__action {
+  background: $scss-color-focus-background;
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+  bottom: ms(3);
+  padding: ms(2);
+  position: absolute;
+  top: ms(3);
+  right: ms(3);
+  max-width: 480px;
+  @extend %clearfix;
+
+  // Style on tablet device
+  @media (max-width: 768px) {
+    left: ms(3);
+    max-width: 100%;
+  }
+
+  // Style on mobile device
+  @media screen and (max-width: 480px) {
+    left: 20px;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  a {
+    display:block;
+    font-size: $font-size-small;
+  }
+
+  .joms-actions {
+    margin-top: ms(1);
+    overflow: hidden;
+
+    button, a {
+      float: right;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-top: 0;
+      text-transform: uppercase;
+      width: auto;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .joms-checkbox {
+    float: left;
+    margin-right: 0;
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    input {
+      position: relative;
+      margin-top: 0;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    span {
+      margin-top: 0;
+      margin-left: 0;
+      vertical-align: middle;
+    }
+  }
+
+  .joms-checkbox span, a {
+    @if ($scss-color-focus-background != white ) {
+      color: color-contrast($scss-color-focus-background);
+      
+      &:hover {
+        color: color-contrast($scss-color-focus-background);
+      }
+    }
+  }
+
+  .joms-input--append {
+    .joms-icon {
+      top: 30%;
+    }
+  }
+
+  .joms-input {
+    border: 0;
+    border-bottom: 2px solid $scss-color-border;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: ms();
+  }
+
+
+  // 481px : screen : 992px
+  // ----------------------
+  @include media('medium') {
+    .joms-checkbox, a {
+      display: inline-block;
+      margin-top: ms(-1);
+      font-size: $font-size-small;
+    }
+  }
+
+    // 992px : screen : 1200px
+    // -----------------------
+    @include media('large') {
+      .joms-input {
+        margin-bottom: 0;
+      }
+
+      .joms-input--append {
+        margin-bottom: ms();
+
+        input {
+          border-radius: 0;
+        }
+      }
+
+      .joms-input--append {
+        vertical-align: top;
+      }
+
+      button {
+        width: 24.7%;
+      }
+
+    }
+
+  &.tfaenabled {
+    @include media('large') {
+
+      .joms-input {
+        margin-bottom: 0;
+      }
+
+      .joms-input--append, button {
+        display: inline-block;
+      }
+
+      .joms-input--append {
+        vertical-align: top;
+        width: 24%;
+      }
+
+      button {
+        width: 20%;
+      }
+    }
+  }
+}
+
+// Other links
+// -----------
+.other-links {
+  padding-top: 10px;
+  text-align: left;
+  @extend %clearfix;
+
+  a {
+    display: inline-block;
+    margin-right: ms();
+
+    @media screen and (max-width: 480px) {
+      display: block;
+      margin: 0 0 5px 0;
+    }
+  }
+}

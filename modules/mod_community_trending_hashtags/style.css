@@ -1,0 +1,16 @@
+.joms-module--trendinghashtag li {
+    padding: 6px 0;
+    margin: 4px;
+    border:1px solid rgba(0,0,0,0.06);
+}
+
+.joms-module--trendinghashtag li a {
+    padding: 8px;
+    text-decoration: none;
+}
+
+.joms-module--trendinghashtag span {
+    padding:8px;
+    background: rgba(0,0,0,0.04);
+    font-size: small;
+}

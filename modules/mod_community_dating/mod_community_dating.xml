@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+	<name>JS Dating</name>
+	<author>iJoomla</author>
+	<creationDate>Dec 2016</creationDate>
+	<copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://jomsocial.com</authorUrl>
+	<version>4.7.6</version>
+	<description>Dating module for JomSocial</description>
+	<files>
+		<filename module="mod_community_dating">mod_community_dating.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_community_dating.xml</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>models/fields/jsbirthdate.php</filename>
+        <filename>models/fields/jsgender.php</filename>
+        <filename>models/fields/jslocation.php</filename>
+        <filename>assets/css/style.css</filename>
+        <filename>assets/js/scripts.js</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_dating.ini</language>
+    </languages>
+	<config>
+        <fields name="params" addfieldpath="/modules/mod_community_dating/models/fields">
+            <fieldset name="basic">
+                <field name="gender_field" type="jsgender" label="MOD_COMMUNITY_DATING_GENDER_SETTINGS"
+                       description="MOD_COMMUNITY_DATING_GENDER_SETTINGS_DESC"
+                       required="false" />
+                <field name="age_field" type="jsbirthdate" label="MOD_COMMUNITY_DATING_BIRTHDATE_SETTINGS"
+                       description="MOD_COMMUNITY_DATING_BIRTHDATE_SETTINGS_DESC"
+                       required="false" />
+                <field name="location_field" type="jslocation" label="MOD_COMMUNITY_DATING_LOCATION_SETTINGS"
+                       description="MOD_COMMUNITY_DATING_LOCATION_SETTINGS_DESC"
+                       required="false" />
+                <field name="use_radius_search" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_DATING_RADIUS_SEARCH_SETTINGS" description="MOD_COMMUNITY_DATING_RADIUS_SEARCH_SETTINGS_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+  <updateservers>
+    <server type="extension" priority="1" name="JS Dating">https://www.jomsocial.com/updates/jsdating_update.xml</server>
+  </updateservers>
+</extension>

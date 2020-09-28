@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="template">
+	<name>Column</name>
+	<version>1.1.0</version>
+	<creationDate>May 2019</creationDate>
+	<author>JomSocial Team</author>
+	<authorEmail>support@azrul.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<copyright>Copyright 2008 - 2019 by Slashes &amp; Dots Sdn Bhd. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>New theme for JomSocial</description>
+	
+	<updateservers>
+    	<server type="extension">http://update.joomlart.com/service/tracking/j31/jomsocial_column.xml</server>
+	</updateservers>
+
+</extension>

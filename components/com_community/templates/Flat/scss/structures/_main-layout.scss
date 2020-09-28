@@ -1,0 +1,131 @@
+.jomsocial-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  &.show-menu .jomsocial {
+    -webkit-transform: translateX($sidebar-menu-width);
+    -ms-transform: translateX($sidebar-menu-width);
+    transform: translateX($sidebar-menu-width);
+  }
+
+  &.show-menu--user .jomsocial {
+    -webkit-transform: translateX(-($sidebar-menu-width));
+    -ms-transform: translateX(-($sidebar-menu-width));
+    transform: translateX(-($sidebar-menu-width));
+  }
+  
+  @include media('large') {
+    overflow:visible;
+  }
+}
+
+.jomsocial-wrapper .jomsocial {
+  // padding: ms();
+  height: 100%;
+  min-height: 480px;
+  position: relative;
+
+  *, *:before, *:after {
+    /* apply a natural box layout model to all elements */
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @extend %row;
+  @extend %clearfix;
+
+  @if $scss-direction == rtl {
+    text-align: right !important;
+  }
+}
+
+.joms-body {
+  @extend %clearfix;
+}
+
+.joms-main {
+  @extend %column;
+  width:100%;
+  @include media('large') {
+
+    @if ($scss-stream-position == left) {
+      float: left;
+      padding-right: $ms-base * 1.5;
+      padding-left: 0;
+    }
+
+    @else {
+      padding-left: $ms-base * 1.5;
+    }
+    width: $primary-width;
+  }
+}
+
+.joms-main--full {
+  width: 100%;
+  margin:0;
+  padding:0;
+}
+
+.joms-sidebar {
+  @extend %column;
+  width: 100%;
+  @include media('large') {
+
+    @if ($scss-stream-position == left) {
+      float: right;
+      padding-right: 0;
+    }
+
+    width: $secondary-width;
+  }
+}
+
+// Module on sidebar
+.joms-sidebar {
+  .joms-module__wrapper {
+    border: 1px solid $scss-color-border;
+
+    .joms-tab__bar {
+      background: $scss-color-moduletab-background;
+      padding: 5px 5px 0;
+      overflow: hidden;
+      color: $scss-white;
+
+      // Style for mobile
+      @media screen and (max-width: 480px) {
+        padding-top: 10px;
+      }
+
+      a {
+        background-color: rgba(0,0,0,0.2);
+        color: color-contrast($scss-color-moduletab-background);
+        display: block;
+        float: left;
+        font-size: $scss-font-size;
+        margin: 0 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        vertical-align: middle;
+
+        // Style for mobile
+        @media screen and (max-width: 480px) {
+          margin: 0 5px 10px;
+        }
+      }
+
+      .active {
+        background: $scss-white;
+        font-weight: 500;
+        color: #999;
+      }
+    }
+  }
+}

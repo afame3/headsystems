@@ -1,0 +1,43 @@
+// Helper class made for module with top lists, like top photos etc.
+%joms-module--top {
+    margin-bottom: ms();
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .joms-stream__header {
+        margin-bottom: 0;
+    }
+}
+
+// Custom style for module joms notifications on JA Magz II
+.head-social {
+	.joms-notifications {
+		background: transparent;
+		display: table-cell;
+		vertical-align: middle;
+
+		a {
+			padding: 0 $ms-base;
+			position: relative;
+
+			> span {
+				background: $scss-color-important;
+				border-radius: 3px;
+				font-size: 10px;
+				color: white;
+				position: absolute;
+				padding: 0 4px;
+				top: -5px;
+				right: 5px;
+			}
+		}
+
+		.joms-icon {
+			fill: $dark-text-default;
+			height: 16px;
+			width: 16px;
+		}
+	}
+}

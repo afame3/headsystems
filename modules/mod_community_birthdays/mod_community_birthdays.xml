@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>JS Birthday</name>
+    <author>iJoomla</author>
+    <creationDate>April 2015</creationDate>
+    <copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>4.7.6</version>
+    <description>Birthday module for JomSocial</description>
+    <files>
+        <filename module="mod_community_birthdays">mod_community_birthdays.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>mod_community_birthdays.xml</filename>
+        <filename>models/fields/jsbirthday.php</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_birthdays.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_community_birthdays/models/fields">
+                <field name="show" type="list" default="1"
+                       label="MOD_COMMUNITY_BIRTHDAYS_SHOW_SETTINGS"
+                       description="MOD_COMMUNITY_BIRTHDAYS_SHOW_TIPS">
+                    <option value="0">MOD_COMMUNITY_BIRTHDAYS_ALL_USER_OPTION</option>
+                    <option value="1">MOD_COMMUNITY_BIRTHDAYS_FRIENDS_ONLY_OPTION</option>
+                </field>
+                <field name="jsbirthday" type="jsbirthday" label="MOD_COMMUNITY_BIRTHDAYS_BDAYFIELD_SETTINGS"
+                       description="MOD_COMMUNITY_BIRTHDAYS_BDAYFIELD_DESC"
+                       required="false" />
+                <field name="days" type="text" default="3" label="MOD_COMMUNITY_BIRTHDAYS_DAYS_ADV_SETTINGS" description="MOD_COMMUNITY_BIRTHDAYS_DAYS_ADV_DESC"/>
+                <field name="show_age" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_BIRTHDAYS_SHOW_AGE" description="MOD_COMMUNITY_BIRTHDAYS_SHOW_AGE_TIPS">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="limit" type="text" default="3" label="MOD_COMMUNITY_BIRTHDAYS_LIMIT_SETTINGS" description="MOD_COMMUNITY_BIRTHDAYS_LIMIT_DESC"/>
+                <field name="dateformat" type="list" class="btn-group btn-group-yesno" default="l, F j" label="MOD_COMMUNITY_BIRTHDAYS_DATE_FORMAT" description="MOD_COMMUNITY_BIRTHDAYS_DATE_FORMAT_TIPS">
+                    <option value="l, F j">l, F j</option>
+                    <option value="D, M j">D, M j</option>
+                    <option value="l">l</option>
+                 </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" priority="1" name="JS Birthdays">https://www.jomsocial.com/updates/jsbirthdays_update.xml</server>
+    </updateservers>
+</extension>
